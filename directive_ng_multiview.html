@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>AngularJS-directive_multiview</title>
+<script src="lib/angular.min.js"></script>
+<script src="directive_ng_multiview.js"></script>
+
+</head>
+<body>
+<div ng-app="app">
+    <a href="#/">Home Page</a> | <a href="#/cats">Cats</a>
+    <div ng-multi-view="content"></div>
+    <div ng-multi-view="secondaryContent"></div>
+</div>
+</body>
+</html>

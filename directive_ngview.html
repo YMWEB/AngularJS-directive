@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head><title>AngularJS-directive_custom_part1</title>
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-route.min.js"></script>
+</head>
+  <body>
+      <h2>AngularJS Sample Application</h2>
+      <div ng-app = "mainApp">
+        
+         <div ng-view></div>
+         
+         
+      </div>
+      
+      <script>
+         var mainApp = angular.module("mainApp", ['ngRoute']);
+         mainApp.config(['$routeProvider', function($routeProvider) {
+            $routeProvider.
+            
+            when('/', {
+               templateUrl: 'ngView.htm',
+               controller: 'appCtrl'
+            }) 
+         }]);
+         
+         mainApp.controller('appCtrl', function($scope) {
+            
+         });
+			
+      </script>
+      
+   </body>

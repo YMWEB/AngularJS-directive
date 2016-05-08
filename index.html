@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head><title>AngularJS-directive_custom_part1</title>
+<script src="lib/angular.min.js"></script>
+<script src="function.js"></script></head>
+
+</style>
+<body>
+	<div ng-controller="MainController" ng-init="myProperty='Hello World'">
+	outside: {{myProperty}}
+	<input ng-model="myProperty"/>
+	<div my-directive></div>
+
+<div side-box title="TagCloud">
+        <div class="tagcloud">
+            <a href="">Graphics</a>
+            <a href="">ng</a>
+            <a href="">D3</a>
+            <a href="">Front-end</a>
+            <a href="">Startup</a>
+        </div>
+   </div>
+</br>
+   <my-dialog ng-hide="dialogIsHidden" on-close="hideDialog()">
+    Check out the contents, {{name}}!
+  </my-dialog>
+</br>
+  <input type="text" ng-model="color" placeholder="Enter a color" />
+  <hello-world/>
+</body>
+</html>
